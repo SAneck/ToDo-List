@@ -1,0 +1,23 @@
+.block{
+    width: 200px;
+    height: 80px;
+    background-color: bisque;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 15px;
+}
+.confirmb{
+    width: 35px;
+    height: 35px;
+    background-color: green;
+    border-radius: 8px;
+}
+.deleteb{
+    width: 35px;
+    height: 35px;
+    background-color: red;
+    border-radius: 8px;
+}
