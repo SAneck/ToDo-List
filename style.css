@@ -21,3 +21,11 @@
     background-color: red;
     border-radius: 8px;
 }
+.new-input{
+    height: 40px;
+    width: 100px;
+}
+.new-button{
+   width: 40px;
+   height: 20px; 
+}
