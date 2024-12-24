@@ -1,13 +1,26 @@
+body{
+    display: flex;
+    align-items: center; 
+    align-content: center;
+    justify-content: center;
+    background-color: #7aa0ff;
+    flex-direction: column;
+}
 .block{
     width: 200px;
     height: 80px;
-    background-color: bisque;
+    background-color: #fcfcfc;
     margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
     border-radius: 15px;
+    box-shadow: 2px 11px 46px -1px rgba(34, 60, 80, 0.22);
+}
+.click{
+    display: flex;
+    flex-direction: row;
 }
 .confirmb{
     width: 35px;
@@ -20,4 +33,12 @@
     height: 35px;
     background-color: red;
     border-radius: 8px;
+}
+.new-input{
+    height: 40px;
+    width: 100px;
+}
+.new-button{
+   width: 40px;
+   height: 20px; 
 }

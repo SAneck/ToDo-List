@@ -8,22 +8,32 @@ const tasks = []
 function render(){
     mainDiv.innerHTML = ''
     tasks.forEach((task, indexTask) => {
-    const addTask = document.createElement('div')
+    const newTask = document.createElement('div')
     const editButton = document.createElement('button')
     var deelteButton = document.createElement('button')
     editButton.classList.add('confirmb')
     editButton.addEventListener('click', () => {
-        editTask(indexTask)
+        const newInput = document.createElement('input')
+        const newButton = document.createElement('button')
+        newInput.classList.add('new-input')
+        newButton.classList.add('new-button')
+        newTask.appendChild(newButton)
+        newTask.appendChild(newInput)
+        newButton.addEventListener('click', () =>{
+            tasks.splice(indexTask, 1, newInput.value)
+            console.log(newInput.value)
+            render()
+        })
     })
     deelteButton.classList.add('deleteb')
     deelteButton.addEventListener('click', () => {
         deleteTask(indexTask)
     })
-    addTask.classList.add('block')
-    addTask.textContent = task
-    addTask.appendChild(deelteButton)
-    addTask.appendChild(editButton)
-    mainDiv.appendChild(addTask)
+    newTask.classList.add('block')
+    newTask.textContent = task
+    newTask.appendChild(deelteButton)
+    newTask.appendChild(editButton)
+    mainDiv.appendChild(newTask)
 })
 }
 
@@ -39,10 +49,9 @@ function deleteTask(indexTask){
     tasks.splice(indexTask, 1)
     render()
 }
-function editTask(indexTask){
-    let newValue = prompt('Введите нвоое значение', tasks[indexTask])
-    tasks[indexTask] = newValue
-    render()
-}
+// function editTask(indexTask){
+    
+// }
 
 addButton.addEventListener('click', addTask)
+
