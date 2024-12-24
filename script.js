@@ -54,3 +54,4 @@ function deleteTask(indexTask){
 // }
 
 addButton.addEventListener('click', addTask)
+
