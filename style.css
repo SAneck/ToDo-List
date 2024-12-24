@@ -6,9 +6,23 @@ body{
     background-color: #7aa0ff;
     flex-direction: column;
 }
-.block{
+#text-task{
     width: 200px;
-    height: 80px;
+    height: 25px;
+    border-radius: 8px;
+}
+#add-button{
+    width: 80px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+}
+#add-button:hover{
+    background-color: antiquewhite;
+}
+.block{
+    width: 255px;
+    height: 45px;
     background-color: #fcfcfc;
     margin-top: 20px;
     display: flex;
@@ -17,10 +31,28 @@ body{
     padding: 20px;
     border-radius: 15px;
     box-shadow: 2px 11px 46px -1px rgba(34, 60, 80, 0.22);
+    flex-direction: column;
+    align-items: center;
 }
-.click{
+.con{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+.con2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+.con-newbl{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
 .confirmb{
     width: 35px;
@@ -33,12 +65,16 @@ body{
     height: 35px;
     background-color: red;
     border-radius: 8px;
+    margin-right: 20px;
 }
 .new-input{
-    height: 40px;
-    width: 100px;
+    height: 35px;
+    width: 150px;
+    margin-right: 10px;
 }
 .new-button{
-   width: 40px;
-   height: 20px; 
+   width: 35px;
+   height: 35px; 
+   width: 35px;
+   height: 35px;
 }
