@@ -45,10 +45,13 @@ function render(){
         newTask.appendChild(newButton)
 
         newButton.addEventListener('click', () =>{
-            
-            newInput.value.trim() == '' ? alert('Введите текст!') :
-            tasks.splice(indexTask, 1, newInput.value)
-            render()
+            if(tasks.includes(newInput.value) !== true){
+                newInput.value.trim() == '' ? alert('Введите текст!') :
+                tasks.splice(indexTask, 1, newInput.value)
+                render()
+            } else{
+                alert('У вас уже есть эта задача!')
+            }
         })
         if(newButton){
             editButton.remove()
@@ -69,11 +72,15 @@ function render(){
 }
 
 function addTask(){
-    inputTask.value.trim() == '' ? alert("Вы ничего не ввели") :
-    tasks.push(inputTask.value)
-    console.log(inputTask.value)
-    inputTask.value =''
-    render()
+    if(tasks.includes(inputTask.value) !== true){
+        inputTask.value.trim() == '' ? alert("Вы ничего не ввели") :
+        tasks.push(inputTask.value)
+        console.log(inputTask.value)
+        inputTask.value =''
+        render()
+    } else{
+        alert('У вас уже есть эта задача!')
+    }
 }
 
 function deleteTask(indexTask){
