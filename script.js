@@ -36,15 +36,20 @@ function render(){
         containerbtn.style.display = 'none'
 
         const newInput = document.createElement('input')
+        const cancelButton = document.createElement('button')
         const newButton = document.createElement('button')
         newInput.placeholder = "Редактируйте..."
 
         newInput.classList.add('new-input')
+        cancelButton.classList.add('cancel-button')
         newButton.classList.add('new-button')
 
         newTask.appendChild(newInput)
+        newTask.appendChild(cancelButton)
         newTask.appendChild(newButton)
-
+        cancelButton.addEventListener('click',() => {
+            render()
+        })
         newButton.addEventListener('click', () =>{
             if(tasks.includes(newInput.value) !== true){
                 newInput.value.trim() == '' ? alert('Введите текст!') :
@@ -60,6 +65,7 @@ function render(){
         }
 
         containerNewBlocks.appendChild(newInput)
+        containerNewBlocks.appendChild(cancelButton)
         containerNewBlocks.appendChild(newButton)
 
     })
