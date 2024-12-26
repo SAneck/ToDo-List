@@ -30,7 +30,7 @@ function render(){
     containerbtn.appendChild(editButton)   
 
     editButton.classList.add('confirmb')
-    editButton.addEventListener('click', () => {
+    editButton.addEventListener('click' || 'keydown', () => {
         containerNewBlocks.style.display ='flex'
         container.style.display = 'none'
         containerbtn.style.display = 'none'
@@ -67,7 +67,6 @@ function render(){
         containerNewBlocks.appendChild(newInput)
         containerNewBlocks.appendChild(cancelButton)
         containerNewBlocks.appendChild(newButton)
-
     })
 
     deelteButton.classList.add('deleteb')
@@ -75,6 +74,7 @@ function render(){
         deleteTask(indexTask)
     })
         mainDiv.appendChild(newTask)
+        
 })
 }
 function addTask(){ 
