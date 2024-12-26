@@ -1,80 +1,184 @@
 body{
     display: flex;
-    align-items: center; 
-    align-content: center;
     justify-content: center;
-    background-color: #7aa0ff;
-    flex-direction: column;
+    align-items: center; /* Вертикальное центрирование */
+    height: 100vh;
+
+    /* Сброс дефолтных отступов */
+    margin: 0;
+    padding: 0;
+
+    /* Шрифт и цвет */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+
+    /* Фон */
+    background-color: #fff;
+
+    /* Плавная прокрутка */
+    scroll-behavior: smooth;
+
+    /* Антиалиасинг шрифтов */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Запрет переноса текста */
+    word-wrap: break-word;
+
+    /* Отключение выделения текста */
+    user-select: none;
+
+    /* Адаптивность */
+    max-width: 100%;
+    overflow-x: hidden;
+
+
+/* Дополнительные настройки для ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* Сброс стилей списков */
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+}
+
+.background-block{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 900px;
+    background: #B4D7FF;
+    border-radius: 45px;
+}
+
+.background-block h2{
+    text-align: center;
+}
+
+#content{
+    font-weight: 700;
+    font-size: 63.8863px;
+    line-height: 77px;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 6.38863px 14.2147px rgba(0, 0, 0, 0.25);
+    padding-bottom: 40px;
+    padding-top: 30px;
+}
+.task-action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 480px;
+    height: 80px;
+    border-radius: 16px;
+    background-color: #64ACFF; 
 }
 #text-task{
-    width: 200px;
-    height: 25px;
-    border-radius: 8px;
+    margin-left: 10px;
+    width: 330px;
+    height: 75px;
+    font-size: 24px;
+    outline: none;
+    color: white;
+    padding-top: 20px;
+    margin-bottom: 25px;
+    border-bottom: 5px solid;
+}
+#text-task::placeholder{
+    color: white;
 }
 #add-button{
-    width: 80px;
-    height: 30px;
+    margin-right: 10px;
+    width: 48px;
+    height: 48px;
     border-radius: 8px;
-    background-color: #fcfcfc;
+    background-image: url("img/addBtn.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #add-button:hover{
-    background-color: antiquewhite;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
 }
 .block{
-    width: 255px;
-    height: 45px;
-    background-color: #fcfcfc;
-    margin-top: 20px;
     display: flex;
+    align-items: center;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content:end;
+    width: 480px;
+    height: 80px;
+    background-color: #64ACFF; 
+    margin-top: 20px;
+    padding: 20px 0px 20px 0px;
     border-radius: 15px;
     box-shadow: 2px 11px 46px -1px rgba(34, 60, 80, 0.22);
-    flex-direction: column;
-    align-items: center;
+
 }
 .con{
-    display: flex;
-    flex-direction: row;
+    max-width: 350px;
+    color: white;
+    font-size: 28px;    
     width: 100%;
-    align-items: center;
 }
 .con2{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
-    justify-content: flex-end;
+    width: 110px;
+    margin-right: 10px;
 }
 .con-newbl{
-    display: flex;
+    display: none;
     flex-direction: row;
     width: 100%;
     align-items: center;
     justify-content: space-between;
 }
 .confirmb{
-    width: 35px;
-    height: 35px;
-    background-color: green;
+    width: 48px;
+    height: 48px;
     border-radius: 8px;
+    background-image: url("img/editbtn.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 10px;
 }
 .deleteb{
-    width: 35px;
-    height: 35px;
-    background-color: red;
+    width: 48px;
+    height: 48px;
     border-radius: 8px;
-    margin-right: 20px;
+    background-image: url("img/delBtn.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .new-input{
-    height: 35px;
-    width: 150px;
-    margin-right: 10px;
+    margin-left: 10px;
+    width: 330px;
+    height: 75px;
+    font-size: 24px;
+    outline: none;
+    color: white;
+    padding-top: 20px;
+    margin-bottom: 25px;
+    border-bottom: 5px solid;
+}
+.new-input::placeholder{
+    color: white;
 }
 .new-button{
-   width: 35px;
-   height: 35px; 
-   width: 35px;
-   height: 35px;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background-image: url("img/conf.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 10px;
 }

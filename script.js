@@ -13,10 +13,8 @@ function render(){
     const containerbtn = document.createElement('div')
     const containerNewBlocks = document.createElement('div')
 
-    const editButton = document.createElement('button')
     const deelteButton = document.createElement('button')
-    editButton.textContent = 'Edit'
-    deelteButton.textContent = 'Del'
+    const editButton = document.createElement('button')
 
     newTask.classList.add('block')
     container.classList.add('con')
@@ -33,10 +31,13 @@ function render(){
 
     editButton.classList.add('confirmb')
     editButton.addEventListener('click', () => {
+        containerNewBlocks.style.display ='flex'
+        container.style.display = 'none'
+        containerbtn.style.display = 'none'
 
         const newInput = document.createElement('input')
         const newButton = document.createElement('button')
-        newButton.textContent = 'Ent'
+        newInput.placeholder = "Редактируйте..."
 
         newInput.classList.add('new-input')
         newButton.classList.add('new-button')
@@ -70,12 +71,10 @@ function render(){
         mainDiv.appendChild(newTask)
 })
 }
-
-function addTask(){
+function addTask(){ 
     if(tasks.includes(inputTask.value) !== true){
         inputTask.value.trim() == '' ? alert("Вы ничего не ввели") :
         tasks.push(inputTask.value)
-        console.log(inputTask.value)
         inputTask.value =''
         render()
     } else{
@@ -89,4 +88,3 @@ function deleteTask(indexTask){
 }
 
 addButton.addEventListener('click', addTask)
-

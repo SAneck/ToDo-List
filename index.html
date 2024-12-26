@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <title>ToDo-List</title>
 </head>
 <body>
-    <h2 id ='content'></h2>
-    <div>
-        <input id = "text-task" type="text">
-        <button id = "add-button">Добавить</button>
+    <div class = "background-block">
+        <div>
+            <h2 id ='content'>ToDo-List</h2>
+        <div class = "task-action">
+            <input id = "text-task" type="text" placeholder="Ваша задача...">
+            <button id = "add-button"></button>
+        </div>
+        <div class="main"></div>
+        </div>
     </div>
-    <div class="main"></div>
     <script src="./script.js"></script>
 </body>
 </html>
