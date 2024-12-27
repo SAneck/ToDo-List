@@ -94,3 +94,8 @@ function deleteTask(indexTask){
 }
 
 addButton.addEventListener('click', addTask)
+inputTask.addEventListener('keydown',  (event) => {
+    if (event.key === 'Enter') { // Проверяем, была ли нажата клавиша Enter
+      addTask(); // Выполняем действие кнопки
+    }
+  });
